@@ -1,0 +1,39 @@
+Desafio onde processamos e transformamos dados com PowerBi.
+
+Ações e análises do PowerBI
+Esta seção descreve a série de ações executadas no PowerBI para limpar, transformar e analisar os dados do banco de dados azure_company. Cada etapa é crucial para garantir a integridade dos dados e prepará-los para uma análise significativa.
+
+Etapas de preparação de dados
+Verifique cabeçalhos e tipos de dados : verifique os cabeçalhos e tipos de dados de cada coluna no conjunto de dados.
+
+Modificar valores monetários : Converta todos os valores monetários para o tipo de precisão dupla.
+
+Análise de valor nulo : verifique a existência de valores nulos e considere sua remoção.
+
+Identificar Gerentes : Funcionários com valores nulos no Super_ssncampo podem ser gerentes. Valide se há algum funcionário sem gestor.
+
+Verifique se há departamentos sem gerentes : Verifique se há algum departamento sem gerente designado.
+
+Preencha as informações faltantes do gerente : Se houver departamentos sem gerentes, presuma que você possui os dados necessários e preencha as lacunas.
+
+Etapas de transformação de dados
+Examine as horas do projeto : revise o número de horas alocadas para cada projeto.
+
+Dividir colunas complexas : divida colunas contendo vários tipos de informações.
+
+Mesclar consultas de funcionários e departamentos : crie uma nova tabela mesclando as tabelas employeee department, focando na employeetabela como base. O tipo de adesão dependerá dos requisitos específicos.
+
+Remover colunas desnecessárias : Elimine colunas que não são essenciais para análises posteriores.
+
+Unir nomes de funcionários e gerentes : isso pode ser feito usando consultas SQL ou mesclando tabelas no PowerBI. Se SQL for usado, especifique a consulta no README.
+
+Mesclar nomes e sobrenomes : combine o nome e o sobrenome em uma única coluna para representar o nome completo de cada funcionário.
+
+Mesclar nomes e locais de departamentos : combine os nomes dos departamentos com seus locais para criar combinações exclusivas de departamento-local. Isso será útil para criar um esquema em estrela em módulos futuros.
+
+Explicação para mesclagem versus atribuição : explique por que, neste caso específico, a mesclagem é preferível à atribuição.
+
+Etapas de análise de dados
+Dados do Grupo por Gerente : Agregue os dados para saber quantos funcionários são gerenciados por cada gerente.
+
+Remover outras colunas desnecessárias : Exclua colunas que não serão usadas no relatório final.
